@@ -1,4 +1,5 @@
 // routes
+import backup from './page/backup'
 
 export default [
 	{
@@ -29,8 +30,5 @@ export default [
 		path: '/about',
 		controller: () => import('./page/about/Controller'),
 	},
-	{
-		path: '*',
-		controller: () => import('./page/home/Controller'),
-	}
+	...backup,
 ]
